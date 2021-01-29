@@ -1,0 +1,18 @@
+---
+version: "1"
+rules:
+  - base: master
+    upstream: qmk:master
+    mergeMethod: hardreset
+    mergeUnstable: false
+  - base: kruton
+    upstream: qmk:master
+    mergeMethod: rebase
+    assignees:
+      - kruton
+    reviewers:
+      - kruton
+    conflictReviewers:
+      - kruton
+label: ":arrow_heading_down: pull"
+conflictLabel: "merge-conflict"
